@@ -8,6 +8,12 @@ var server = http.createServer(function (request, response) {
   if(parsedUrl.pathname === '/suma') {
     math_ops.add(parsedUrl.query, response)
   }
+  if(parsedUrl.pathname === '/mult') {
+    math_ops.mult(parsedUrl.query, response)
+  }
+  if(parsedUrl.pathname === '/fib') {
+    math_ops.fib(parsedUrl.query, response)
+  } 
 })
 
 server.listen(8080)
